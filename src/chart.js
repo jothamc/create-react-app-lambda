@@ -17,7 +17,7 @@ class Chart extends React.Component {
     
     handleSearch(fields) {
         var parseDate = d3.utcParse("%Y-%m-%d")
-        fetch('http://localhost:8000/stocks/get-stocks/', {
+        fetch('https://stock-appjotham.herokuapp.com/stocks/get-stocks/', {
             method: "POST",
             body: JSON.stringify({
                 symbol: fields.currentSymbol,
@@ -47,7 +47,7 @@ class Chart extends React.Component {
     componentDidMount() {
         var parseDate = d3.utcParse("%Y-%m-%d")
         
-        fetch('http://localhost:8000/stock/', {})
+        fetch('https://stock-appjotham.herokuapp.com/stock/', {})
             .then((response) => {
                 return response.json()
             })
