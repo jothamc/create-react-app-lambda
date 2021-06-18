@@ -17,7 +17,7 @@ class SearchBar extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:8000/stocks/symbols/', {})
+        fetch('https://stock-appjotham.herokuapp.com/stocks/symbols/', {})
         .then(response=> response.json())
         .then(data=>{
             this.setState({
